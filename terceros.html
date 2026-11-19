@@ -256,18 +256,24 @@
       </form>
 
       <!-- DASHBOARD DE RESUMEN DE LOS DATOS -->
-      <div id="resumen-titular" class="hidden grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs bg-gray-50 border border-gray-200 rounded-xl p-4">
-        <div>
-          <span class="text-gray-400 block mb-0.5">Perfil</span>
-          <span id="res-perfil" class="font-semibold text-gray-800">-</span>
+      <div>
+        <div id="resumen-titular" class="hidden grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs bg-gray-50 border border-gray-200 rounded-xl p-4">
+          <div>
+            <span class="text-gray-400 block mb-0.5">Perfil</span>
+            <span id="res-perfil" class="font-semibold text-gray-800">-</span>
+          </div>
+          <div>
+            <span class="text-gray-400 block mb-0.5">Nombre / Razón Social</span>
+            <span id="res-nombre" class="font-semibold text-gray-800">-</span>
+          </div>
+          <div>
+            <span class="text-gray-400 block mb-0.5">Correo</span>
+            <span id="res-correo" class="font-semibold text-gray-800">-</span>
+          </div>
         </div>
-        <div>
-          <span class="text-gray-400 block mb-0.5">Nombre / Razón Social</span>
-          <span id="res-nombre" class="font-semibold text-gray-800">-</span>
-        </div>
-        <div>
-          <span class="text-gray-400 block mb-0.5">Correo</span>
-          <span id="res-correo" class="font-semibold text-gray-800">-</span>
+        <div id="resumen-titular" class="hidden grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs bg-gray-50 border border-gray-200 rounded-xl p-4">
+          <span class="text-gray-400 block mb-0.5">Area Solicitante</span>
+          <span id="res-solicitante" class="font-semibold text-gray-800">-</span>
         </div>
       </div>
     </div>
@@ -889,19 +895,24 @@
       $('badge-paso-1').innerHTML = '<i class="fa-solid fa-check text-[10px]"></i>';
       $('btn-editar').classList.remove('hidden');
 
+      // DASHBOARD DE RESUMEN DE LOS DATOS //
       const calidadSel = $('calidad');
       const nacionalidadSel = $('nacionalidad');
       const tipoPersonaSel = $('tipoPersona');
+      const areaSolicitanteSel = $('areaSolicitante');
 
       const calidadTxt = calidadSel.options[calidadSel.selectedIndex].text;
       const nacionalidadTxt = nacionalidadSel.options[nacionalidadSel.selectedIndex].text;
       const tipoPersonaTxt = tipoPersonaSel.options[tipoPersonaSel.selectedIndex].text;
+      const areaSolicitanteTxt = areaSolicitanteSel.options[areaSolicitanteSel.selectedIndex].text;
 
       $('res-perfil').innerText = `${calidadTxt} / ${nacionalidadTxt} / ${tipoPersonaTxt}`;
       $('res-nombre').innerText = $('nombre').value;
       $('res-correo').innerText = $('correoInstitucional').value;
+      $('res-solicitante').innerText = `${areaSolicitanteTxt}`;
       $('resumen-titular').classList.remove('hidden');
 
+      // XXXXXX //
       const calidad = $('calidad').value;
       const nacionalidad = $('nacionalidad').value;
       const tipoPersona = $('tipoPersona').value;
