@@ -256,20 +256,22 @@
       </form>
       
       <!-- RESUMEN DE DATOS DEL SOLICITANTE -->
-      <div id="resumen-titular" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs bg-gray-50 border border-gray-200 rounded-xl p-4">
-        <div>
-          <span class="text-gray-400 block mb-0.5">Perfil</span>
-          <span id="res-perfil" class="font-semibold text-gray-800">-</span>
+      <div id="resumen-titular" class="hidden space-y-3 text-xs bg-gray-50 border border-gray-200 rounded-xl p-4">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div>
+            <span class="text-gray-400 block mb-0.5">Perfil</span>
+            <span id="res-perfil" class="font-semibold text-gray-800">-</span>
+          </div>
+          <div>
+            <span class="text-gray-400 block mb-0.5">Nombre / Razón Social</span>
+            <span id="res-nombre" class="font-semibold text-gray-800">-</span>
+          </div>
+          <div>
+            <span class="text-gray-400 block mb-0.5">Correo</span>
+            <span id="res-correo" class="font-semibold text-gray-800">-</span>
+          </div>
         </div>
-        <div>
-          <span class="text-gray-400 block mb-0.5">Nombre / Razón Social</span>
-          <span id="res-nombre" class="font-semibold text-gray-800">-</span>
-        </div>
-        <div>
-          <span class="text-gray-400 block mb-0.5">Correo</span>
-          <span id="res-correo" class="font-semibold text-gray-800">-</span>
-        </div>
-        <div>
+        <div class="pt-3 border-t border-gray-200">
           <span class="text-gray-400 block mb-0.5">Área solicitante</span>
           <span id="res-solicitante" class="font-semibold text-gray-800">-</span>
         </div>
