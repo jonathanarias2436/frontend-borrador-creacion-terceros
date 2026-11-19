@@ -85,7 +85,7 @@
     </div>
   </header>
 
-  <!-- DESARROLLO LOS PUNTOS DE 1 AL 3 -->
+  <!-- DESARROLLO LAS ETAPAS DE 1 AL 3 -->
   <div class="max-w-4xl mx-auto px-4 md:px-6 mt-8 space-y-6">
 
     <!-- SOLICITUD DE CREACIÓN -->
@@ -254,29 +254,26 @@
           </button>
         </div>
       </form>
-
-      <!-- DASHBOARD DE RESUMEN DE LOS DATOS -->
-      <div id="resumen-titular">
-        <div class="hidden grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs bg-gray-50 border border-gray-200 rounded-xl p-4">
-          <div>
-            <span class="text-gray-400 block mb-0.5">Perfil</span>
-            <span id="res-perfil" class="font-semibold text-gray-800">-</span>
-          </div>
-          <div>
-            <span class="text-gray-400 block mb-0.5">Nombre / Razón Social</span>
-            <span id="res-nombre" class="font-semibold text-gray-800">-</span>
-          </div>
-          <div>
-            <span class="text-gray-400 block mb-0.5">Correo</span>
-            <span id="res-correo" class="font-semibold text-gray-800">-</span>
-          </div>
+      
+      <!-- RESUMEN DE DATOS DEL SOLICITANTE -->
+      <div id="resumen-titular" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs bg-gray-50 border border-gray-200 rounded-xl p-4">
+        <div>
+          <span class="text-gray-400 block mb-0.5">Perfil</span>
+          <span id="res-perfil" class="font-semibold text-gray-800">-</span>
         </div>
-        <div class="hidden grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs bg-gray-50 border border-gray-200 rounded-xl p-4">
-          <span class="text-gray-400 block mb-0.5">Area Solicitante</span>
+        <div>
+          <span class="text-gray-400 block mb-0.5">Nombre / Razón Social</span>
+          <span id="res-nombre" class="font-semibold text-gray-800">-</span>
+        </div>
+        <div>
+          <span class="text-gray-400 block mb-0.5">Correo</span>
+          <span id="res-correo" class="font-semibold text-gray-800">-</span>
+        </div>
+        <div>
+          <span class="text-gray-400 block mb-0.5">Área solicitante</span>
           <span id="res-solicitante" class="font-semibold text-gray-800">-</span>
         </div>
       </div>
-    </div>
 
     <!-- ETAPA 2: DOCUMENTOS REQUERIDOS -->
     <div id="seccion-documentos" class="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-4 hidden shadow-sm">
@@ -318,7 +315,7 @@
     </div>
 
     <!-- ETAPA 3: FINALIZACIÍON -->
-    <div id="seccion-etapa4" class="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-6 hidden shadow-sm text-center">
+    <div id="seccion-etapa3" class="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-6 hidden shadow-sm text-center">
       <div class="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl shadow-md">
         <i class="fa-solid fa-circle-check"></i>
       </div>
