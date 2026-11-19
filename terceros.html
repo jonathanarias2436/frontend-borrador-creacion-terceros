@@ -5,14 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Verificación de Documentos para Terceros - Universidad El Bosque</title>
-  <!-- Tailwind CSS & Font Awesome -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <!-- Tipografía estándar Inter -->
+  
+  <!-- TIPOGRAFÍA INTER -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- ESTILOS -->
   <style>
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -30,7 +31,7 @@
       background-color: #e4660f;
     }
 
-    /* Botones principales con verde brillante institucional */
+    /* BOTONES PRINCIPALES CON VERDE BRILLANTE*/
     .btn-green-inst {
       background-color: #1EC038;
       color: #ffffff;
@@ -40,7 +41,7 @@
       background-color: #19a22f;
     }
 
-    /* Botón "Revalidar documentos" (cascada): aparece cuando hay un documento rechazado */
+    /* BOTÓN "REVALIDAR DOCUMENTOS" */
     .btn-orange-inst {
       background-color: #f97316;
       color: #ffffff;
@@ -54,7 +55,6 @@
       color: #012820;
     }
 
-    /* Select nativo con flecha propia, más separada del borde que la del navegador por defecto */
     .select-flecha {
       appearance: none;
       -webkit-appearance: none;
@@ -68,51 +68,44 @@
   </style>
 </head>
 
+<!-- TERCEROS -->
 <body class="bg-white text-[#232429] min-h-screen pb-16 relative">
 
   <!-- ENCABEZADO INSTITUCIONAL -->
   <header class="border-b border-gray-200 bg-white sticky top-0 z-40">
     <div class="max-w-4xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <img src="./assets/logo.svg" alt="Universidad El Bosque"
-          class="coh-image coh-ce-cpt_unbo_site_header-ab4d05f5 coh-image-responsive-xl w-[179.97px] h-[62.52px] object-contain"
-          style="width: 179.97px; height: 62.52px;"
-          onerror="this.src='https://www.unbosque.edu.co/sites/default/files/logo-universidad-el-bosque.png'">
+        <img src="./assets/logo.svg" alt="Universidad El Bosque" class="coh-image coh-ce-cpt_unbo_site_header-ab4d05f5 coh-image-responsive-xl w-[179.97px] h-[62.52px] object-contain" style="width: 179.97px; height: 62.52px;" onerror="this.src='https://www.unbosque.edu.co/sites/default/files/logo-universidad-el-bosque.png'">
       </div>
       <div class="flex items-center gap-4">
-        <a href="index.html"
-          class="text-xs text-gray-600 nav-link-hover flex items-center gap-1.5 font-medium transition-colors">
+        <a href="menu.html" class="text-xs text-gray-600 nav-link-hover flex items-center gap-1.5 font-medium transition-colors">
           <i class="fa-solid fa-arrow-left"></i> Volver al inicio
         </a>
       </div>
     </div>
   </header>
 
+  <!-- DESARROLLO LOS PUNTOS DE 1 AL 4 -->
   <div class="max-w-4xl mx-auto px-4 md:px-6 mt-8 space-y-6">
 
-    <!-- Título principal -->
+    <!-- SOLICITUD DE CREACIÓN -->
     <div id="bloque-titulo">
       <h1 class="text-2xl font-bold text-[#232429] flex items-center gap-2">
-        <i class="fa-solid fa-shield-halved brand-orange"></i>
-        Solicitud creación tercero
+        <i class="fa-solid fa-shield-halved brand-orange"></i>Solicitud creación tercero
       </h1>
-      <p class="text-gray-500 text-sm mt-1" id="subtitulo-etapa">Por favor completa la siguiente información para
-        continuar.</p>
+      <p class="text-gray-500 text-sm mt-1" id="subtitulo-etapa">Por favor completa la siguiente información para continuar.</p>
       <hr class="border-gray-200 mt-4">
     </div>
 
-    <!-- ETAPA 1: Información del solicitante -->
-    <div id="seccion-info-solicitante"
-      class="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-6 shadow-sm">
+    <!-- ETAPA 1: INFORMACIÓN DEL SOLICITANTE -->
+    <div id="seccion-info-solicitante" class="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-6 shadow-sm">
       <div class="flex items-center justify-between border-b border-gray-100 pb-4">
         <div class="flex items-center gap-3">
-          <div id="badge-paso-1"
-            class="w-7 h-7 rounded-full bg-[#012820] text-white flex items-center justify-center text-xs font-bold">1
+          <div id="badge-paso-1" class="w-7 h-7 rounded-full bg-[#012820] text-white flex items-center justify-center text-xs font-bold">1
           </div>
           <h2 class="text-base font-bold text-[#232429]">Información del solicitante</h2>
         </div>
-        <button id="btn-editar"
-          class="hidden text-xs text-[#FD7519] font-medium hover:underline flex items-center gap-1 cursor-pointer">
+        <button id="btn-editar" class="hidden text-xs text-[#FD7519] font-medium hover:underline flex items-center gap-1 cursor-pointer">
           <i class="fa-solid fa-pen-to-square"></i> Editar
         </button>
       </div>
@@ -120,10 +113,8 @@
       <form id="form-titular" class="space-y-4 text-sm" onsubmit="return false;">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
-            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Calidad <span
-                class="text-red-500">*</span></label>
-            <select id="calidad"
-              class="select-flecha w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
+            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Calidad <span class="text-red-500">*</span></label>
+            <select id="calidad" class="select-flecha w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
               <option value="" disabled selected>Seleccione opción</option>
               <option value="1">Cliente</option>
               <option value="2">Proveedores</option>
@@ -131,10 +122,8 @@
             <p id="err-calidad" class="text-red-500 text-[11px] mt-1 hidden"></p>
           </div>
           <div>
-            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Nacionalidad <span
-                class="text-red-500">*</span></label>
-            <select id="nacionalidad"
-              class="select-flecha w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
+            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Nacionalidad <span class="text-red-500">*</span></label>
+            <select id="nacionalidad" class="select-flecha w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
               <option value="" disabled selected>Seleccione opción</option>
               <option value="2">Nacional</option>
               <option value="1">Extranjero</option>
@@ -142,10 +131,8 @@
             <p id="err-nacionalidad" class="text-red-500 text-[11px] mt-1 hidden"></p>
           </div>
           <div>
-            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Persona <span
-                class="text-red-500">*</span></label>
-            <select id="tipoPersona"
-              class="select-flecha w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
+            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Persona <span class="text-red-500">*</span></label>
+            <select id="tipoPersona" class="select-flecha w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
               <option value="" disabled selected>Seleccione opción</option>
               <option value="1">Natural</option>
               <option value="2">Jurídica</option>
@@ -156,105 +143,120 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Correo del solicitante <span
-                class="text-red-500">*</span></label>
-            <input type="email" id="correoInstitucional" placeholder="correo@ejemplo.com"
-              class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
+            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Correo del solicitante <span class="text-red-500">*</span></label>
+            <input type="email" id="correoInstitucional" placeholder="correo@ejemplo.com" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
             <p id="err-correoInstitucional" class="text-red-500 text-[11px] mt-1 hidden"></p>
           </div>
           <div>
-            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Nombre Completo / Razón Social <span
-                class="text-red-500">*</span></label>
-            <input type="text" id="nombre" placeholder="Ej. Ana Gómez / Empresa SAS"
-              class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
+            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Nombre Completo / Razón Social <span class="text-red-500">*</span></label>
+            <input type="text" id="nombre" placeholder="Nombre / Empresa SAS" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
             <p id="err-nombre" class="text-red-500 text-[11px] mt-1 hidden"></p>
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Cédula <span
-                class="text-red-500">*</span></label>
-            <input type="text" id="cedula" placeholder="Mínimo 6 dígitos"
-              class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
+            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Cédula <span class="text-red-500">*</span></label>
+            <input type="text" id="cedula" placeholder="Mínimo 6 dígitos" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
             <p id="err-cedula" class="text-red-500 text-[11px] mt-1 hidden"></p>
           </div>
           <div>
-            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Expedición cédula <span
-                class="text-red-500">*</span></label>
-            <input type="date" id="fechaExpedicionCedula"
-              class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
+            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Expedición cédula <span class="text-red-500">*</span></label>
+            <input type="date" id="fechaExpedicionCedula" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
             <p id="err-fechaExpedicionCedula" class="text-red-500 text-[11px] mt-1 hidden"></p>
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Lugar de Nacimiento <span
-                class="text-red-500">*</span></label>
-            <input type="text" id="lugarNacimiento" placeholder="Ej. Bogotá"
-              class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
+            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Lugar de Nacimiento <span class="text-red-500">*</span></label>
+            <input type="text" id="lugarNacimiento" placeholder="Ciudad" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
             <p id="err-lugarNacimiento" class="text-red-500 text-[11px] mt-1 hidden"></p>
           </div>
           <div>
-            <label class="block text-gray-700 font-medium mb-1.5 text-xs">País de Nacimiento <span
-                class="text-red-500">*</span></label>
-            <input type="text" id="paisNacimiento" placeholder="Ej. Colombia"
-              class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
+            <label class="block text-gray-700 font-medium mb-1.5 text-xs">País de Nacimiento <span class="text-red-500">*</span></label>
+            <input type="text" id="paisNacimiento" placeholder="País" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
             <p id="err-paisNacimiento" class="text-red-500 text-[11px] mt-1 hidden"></p>
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
-            <label class="block text-gray-700 font-medium mb-1.5 text-xs">NIT</label>
-            <input type="text" id="nit" placeholder="900123456-1"
-              class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
+            <label class="block text-gray-700 font-medium mb-1.5 text-xs">NIT<span class="text-red-500">*</span></label>
+            <input type="text" id="nit" placeholder="900123456-1" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
             <p id="err-nit" class="text-red-500 text-[11px] mt-1 hidden"></p>
           </div>
           <div>
-            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Celular <span
-                class="text-red-500">*</span></label>
-            <input type="text" id="celular" placeholder="Mínimo 8 dígitos"
-              class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
+            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Celular <span class="text-red-500">*</span></label>
+            <input type="text" id="celular" placeholder="Mínimo 8 dígitos" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
             <p id="err-celular" class="text-red-500 text-[11px] mt-1 hidden"></p>
           </div>
           <div>
-            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Dirección de Residencia <span
-                class="text-red-500">*</span></label>
-            <input type="text" id="direccion" placeholder="Calle 100 # 15"
-              class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
+            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Lugar de Residencia <span class="text-red-500">*</span></label>
+            <input type="text" id="lugarResidencia" placeholder="Ciudad" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
+            <p id="err-lugarResidencia" class="text-red-500 text-[11px] mt-1 hidden"></p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+          <div>
+            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Dirección de Residencia <span class="text-red-500">*</span></label>
+            <input type="text" id="direccion" placeholder="Carrera 15 # 47 - 42,  Palermo" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
             <p id="err-direccion" class="text-red-500 text-[11px] mt-1 hidden"></p>
           </div>
         </div>
 
-        <!-- Términos y Condiciones -->
+        <!-- AREA SOLICITANTE -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">    
+          <div>
+            <label class="block text-gray-700 font-medium mb-1.5 text-xs">Area solicitante <span class="text-red-500">*</span></label>
+            <select id="areaSolicitante" onchange="actualizarSubareas()" class="select-flecha w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]">
+              <option value="" disabled selected>Seleccione opción</option>
+              <option value="facultad_ciencias">Facultad de Ciencias</option>
+              <option value="facultad_ciencias_economicas">Facultad de Ciencias Económicas</option>
+              <option value="facultad_ciencias_juridicas">Facultad de Ciencias Juídicas y Políticas</option>
+              <option value="facultad_creacion_y_comunicacion">Facultad de Creación y Comunicación</option>
+              <option value="facultad_educacion">Facultad de Educación</option>
+              <option value="facultad_enfermeria">Facultad de Enfermería </option>
+              <option value="facultad_ingenieria">Facultad de Ingeniería </option>
+              <option value="facultad_medicina">Facultad de Medicina</option>
+              <option value="facultad_odontologia">Facultad de Odontología</option>
+              <option value="facultad_psicología">Facultad de Psicología</option>
+              <option value="departamento_bioetica">Departamento de Bioética</option>
+              <option value="departamento_humanidades">Departamento de Humanidades</option>
+              <option value="biblioteca">Biblioteca</option>
+              <option value="bienestar_universitario">Bienestar Universitario</option>
+            </select>
+            <p id="err-area" class="text-red-500 text-[11px] mt-1 hidden">Por favor seleccione un área</p>
+          </div>
+
+          <div>
+            <label for="subArea" class="block text-gray-700 font-medium mb-1.5 text-xs">Sub-área<span class="text-red-500">*</span></label>
+            <select id="subArea" class="select-flecha w-full bg-white border border-gray-300 rounded-xl px-3 py-2.5 text-xs text-[#232429] focus:outline-none focus:border-[#FD7519]" disabled>
+              <option value="" disabled selected>Primero seleccione un área</option>
+            </select>
+            <p id="err-subarea" class="text-red-500 text-[11px] mt-1 hidden">Por favor seleccione una sub-área</p>
+          </div>
+        </div>
+
+        <!-- TERMINOS Y CONDICIONES -->
         <div class="pt-4 border-t border-gray-100 space-y-2">
-          <button type="button" id="btn-abrir-tc"
-            class="text-[#1EC038] hover:underline text-sm font-medium cursor-pointer block">
-            Leer términos y condiciones
-          </button>
+          <button type="button" id="btn-abrir-tc" class="text-[#1EC038] hover:underline text-sm font-medium cursor-pointer block">Leer términos y condiciones</button>
           <div class="flex items-center gap-2">
-            <input type="checkbox" id="check-autorizacion"
-              class="w-4 h-4 text-[#1EC038] rounded border-gray-300 focus:ring-[#1EC038] cursor-pointer">
-            <label for="check-autorizacion" class="text-xs text-gray-700 cursor-pointer">
-              Autorizo a Universidad El Bosque para el envío de información <span class="text-red-500">*</span>
-            </label>
+            <input type="checkbox" id="check-autorizacion" class="w-4 h-4 text-[#1EC038] rounded border-gray-300 focus:ring-[#1EC038] cursor-pointer">
+            <label for="check-autorizacion" class="text-xs text-gray-700 cursor-pointer">Autorizo a Universidad El Bosque para el envío de información <span class="text-red-500">*</span></label>
           </div>
           <p id="err-autorizacion" class="text-red-500 text-[11px] hidden"></p>
         </div>
-
         <div class="pt-3 flex justify-center">
-          <button id="btn-ejecutar"
-            class="btn-green-inst font-semibold py-3.5 px-10 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm text-sm cursor-pointer">
+          <button id="btn-ejecutar" class="btn-green-inst font-semibold py-3.5 px-10 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm text-sm cursor-pointer">
             <i class="fa-solid fa-check"></i> Validar información
           </button>
         </div>
       </form>
 
-      <!-- Resumen -->
-      <div id="resumen-titular"
-        class="hidden grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs bg-gray-50 border border-gray-200 rounded-xl p-4">
+      <!-- RESUMEN DE LOS DATOS -->
+      <div id="resumen-titular" class="hidden grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs bg-gray-50 border border-gray-200 rounded-xl p-4">
         <div>
           <span class="text-gray-400 block mb-0.5">Perfil</span>
           <span id="res-perfil" class="font-semibold text-gray-800">-</span>
@@ -270,14 +272,11 @@
       </div>
     </div>
 
-    <!-- ETAPA 2: Documentos requeridos -->
-    <div id="seccion-documentos"
-      class="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-4 hidden shadow-sm">
+    <!-- ETAPA 2: DOCUMENTOS REQUERIDOS -->
+    <div id="seccion-documentos" class="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-4 hidden shadow-sm">
       <div class="flex items-center justify-between border-b border-gray-100 pb-4">
         <div class="flex items-center gap-3">
-          <div id="badge-paso-2"
-            class="w-7 h-7 rounded-full bg-[#012820] text-white flex items-center justify-center text-xs font-bold">2
-          </div>
+          <div id="badge-paso-2" class="w-7 h-7 rounded-full bg-[#012820] text-white flex items-center justify-center text-xs font-bold">2</div>
           <h2 class="text-base font-bold text-[#232429]">Documentos requeridos</h2>
         </div>
         <span class="text-xs text-gray-500 hidden sm:inline">Adjunta los soportes en PDF:</span>
@@ -285,49 +284,36 @@
 
       <div id="contenedor-documentos" class="space-y-3"></div>
 
-      <!-- Enlaces de descarga directa: .xlsx/.docx no se pueden previsualizar en un iframe,
-           así que se descargan de una vez en vez de abrir un visor que no funciona para esos formatos. -->
+      <!-- ENLACES DE DESCARGA DIRECTA: .XLSX/.DOCX -->
       <div class="pt-4 border-t border-gray-100 flex flex-wrap gap-3">
-        <a href="assets/Formato único de creación de proveedores, compras bienes y servicios V.07.xlsx" download
-          class="inline-flex items-center gap-1.5 text-xs bg-white border border-[#FD7519] text-[#FD7519] px-3.5 py-2.5 rounded-xl font-medium hover:bg-orange-50 transition-colors shadow-xs cursor-pointer">
-          <i class="fa-solid fa-file-excel"></i> Descargar Formato Proveedores (.xlsx)
+        <a href="assets/Formato único de creación de proveedores, compras bienes y servicios V.07.xlsx" download class="inline-flex items-center gap-1.5 text-xs bg-white border border-[#FD7519] text-[#FD7519] px-3.5 py-2.5 rounded-xl font-medium hover:bg-orange-50 transition-colors shadow-xs cursor-pointer">
+          <i class="fa-solid fa-file-excel"></i>Descargar Formato Proveedores (.xlsx)
         </a>
-        <a href="assets/Formato solicitud emisión factura creación cliente.docx" download
-          class="inline-flex items-center gap-1.5 text-xs bg-white border border-[#FD7519] text-[#FD7519] px-3.5 py-2.5 rounded-xl font-medium hover:bg-orange-50 transition-colors shadow-xs cursor-pointer">
-          <i class="fa-solid fa-file-word"></i> Descargar Solicitud de Factura (.docx)
+        <a href="assets/Formato solicitud emisión factura creación cliente.docx" download class="inline-flex items-center gap-1.5 text-xs bg-white border border-[#FD7519] text-[#FD7519] px-3.5 py-2.5 rounded-xl font-medium hover:bg-orange-50 transition-colors shadow-xs cursor-pointer">
+          <i class="fa-solid fa-file-word"></i>Descargar Solicitud de Factura (.docx)
         </a>
       </div>
 
-      <!-- Botón único de validación (patrón "cascada"): valida en orden y se detiene en el
-           primer documento rechazado. Cambia de texto/color según el estado: Validar (verde) →
-           Procesando → Revalidar documentos (naranja, solo si hubo cambios) → Continuar (verde). -->
       <div class="pt-4 border-t border-gray-100 flex items-center justify-center">
-        <button id="btn-continuar" disabled data-accion="validar"
-          class="btn-green-inst font-semibold py-3.5 px-10 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm text-sm cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
-          <i class="fa-solid fa-check"></i> Validar documentos
+        <button id="btn-continuar" disabled data-accion="validar" class="btn-green-inst font-semibold py-3.5 px-10 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm text-sm cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+          <i class="fa-solid fa-check"></i>Validar documentos
         </button>
       </div>
     </div>
 
-    <!-- Acciones del paso 2, fuera del contenedor de "Documentos requeridos": Volver a la
-         izquierda (siempre que el paso esté activo) y Finalizar registro a la derecha (solo
-         cuando ya se validaron todos los documentos). -->
     <div id="seccion-volver" class="hidden flex items-center justify-between gap-3">
-      <button id="btn-volver"
-        class="px-5 py-2.5 bg-white border border-gray-300 text-gray-700 text-xs font-semibold rounded-xl hover:bg-gray-100 transition-colors shadow-xs cursor-pointer">
+      <button id="btn-volver" class="px-5 py-2.5 bg-white border border-gray-300 text-gray-700 text-xs font-semibold rounded-xl hover:bg-gray-100 transition-colors shadow-xs cursor-pointer">
         Volver
       </button>
-      <button id="btn-finalizar-registro"
-        class="hidden px-6 py-2.5 btn-green-inst text-xs font-semibold rounded-xl transition-colors shadow-sm cursor-pointer flex items-center gap-1.5">
-        Finalizar registro <i class="fa-solid fa-arrow-right ml-1"></i>
+      <button id="btn-finalizar-registro" class="hidden px-6 py-2.5 btn-green-inst text-xs font-semibold rounded-xl transition-colors shadow-sm cursor-pointer flex items-center gap-1.5">
+        Finalizar registro 
+        <i class="fa-solid fa-arrow-right ml-1"></i>
       </button>
     </div>
 
-    <!-- ETAPA 4: Finalizado y Confirmación -->
-    <div id="seccion-etapa4"
-      class="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-6 hidden shadow-sm text-center">
-      <div
-        class="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl shadow-md">
+    <!-- ETAPA 4: FINALIZACIÍON -->
+    <div id="seccion-etapa4" class="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 space-y-6 hidden shadow-sm text-center">
+      <div class="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl shadow-md">
         <i class="fa-solid fa-circle-check"></i>
       </div>
       <div class="space-y-2 max-w-lg mx-auto">
@@ -337,8 +323,7 @@
         </p>
       </div>
       <div class="pt-4 flex justify-center">
-        <button id="btn-finalizar-reiniciar"
-          class="px-8 py-3 btn-green-inst text-xs font-semibold rounded-xl transition-colors shadow-sm cursor-pointer flex items-center gap-2">
+        <button id="btn-finalizar-reiniciar" class="px-8 py-3 btn-green-inst text-xs font-semibold rounded-xl transition-colors shadow-sm cursor-pointer flex items-center gap-2">
           <i class="fa-solid fa-rotate-right"></i> Registrar otro tercero
         </button>
       </div>
@@ -346,15 +331,11 @@
 
   </div>
 
-  <!-- MODAL / DASHBOARD DE TÉRMINOS Y CONDICIONES -->
-  <div id="modal-tc"
-    class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
-    <div
-      class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden border border-gray-200">
-
+  <!-- DASHBOARD DE TÉRMINOS Y CONDICIONES -->
+  <div id="modal-tc" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
+    <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden border border-gray-200">
       <div class="p-6 border-b border-gray-200 flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-gray-50">
-        <img src="./assets/logo.svg" alt="Universidad El Bosque" class="h-12 w-auto object-contain"
-          onerror="this.src='https://www.unbosque.edu.co/sites/default/files/logo-universidad-el-bosque.png'">
+        <img src="./assets/logo.svg" alt="Universidad El Bosque" class="h-12 w-auto object-contain" onerror="this.src='https://www.unbosque.edu.co/sites/default/files/logo-universidad-el-bosque.png'">
         <div class="border-l-0 sm:border-l-2 border-gray-300 sm:pl-4">
           <h2 class="text-base font-bold text-[#232429] leading-snug">
             Política de tratamiento y privacidad de información de la Universidad El Bosque
@@ -362,8 +343,7 @@
         </div>
       </div>
 
-      <div
-        class="p-6 md:p-8 overflow-y-auto space-y-4 text-xs text-gray-700 leading-relaxed max-h-[60vh] bg-white text-justify">
+      <div class="p-6 md:p-8 overflow-y-auto space-y-4 text-xs text-gray-700 leading-relaxed max-h-[60vh] bg-white text-justify">
         <p>Bienvenido al documento de política de privacidad de la Universidad El Bosque (en adelante LA UNIVERSIDAD).
           LA UNIVERSIDAD es una institución de educación superior constituida bajo la figura de Fundación. Los
           diferentes medios digitales y físicos que la UNIVERSIDAD pone a su disposición, tienen como objetivo brindar a
@@ -422,35 +402,30 @@
           adulteración, pérdida, consulta, uso o acceso no autorizado, y almacenará los datos personales hasta tanto
           resulte conveniente o necesario para sus fines institucionales.</p>
 
-        <!-- Bloque inferior con correos interactivos -->
-        <div
-          class="bg-gray-50 p-4 rounded-xl border border-gray-200 mt-6 space-y-1.5 text-[11px] text-gray-600 text-left relative"
-          style="text-align: left !important;">
+        <!-- CORREOS INTERACTIVOS -->
+        <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 mt-6 space-y-1.5 text-[11px] text-gray-600 text-left relative" style="text-align: left !important;">
           <p style="text-align: left !important;"><strong>Fecha de actualización:</strong> Octubre de 2017.</p>
           <p style="text-align: left !important;">
             <strong>Inquietudes y sugerencias:</strong>
-            <button type="button" onclick="abrirSelectorCorreo('atencionalusuario@unbosque.edu.co', event)"
-              class="text-[#FD7519] font-medium hover:underline cursor-pointer focus:outline-none">
+            <button type="button" onclick="abrirSelectorCorreo('atencionalusuario@unbosque.edu.co', event)" class="text-[#FD7519] font-medium hover:underline cursor-pointer focus:outline-none">
               atencionalusuario@unbosque.edu.co
             </button>
           </p>
           <p style="text-align: left !important;">
             <strong>Informar irregularidades (Habeas Data):</strong>
-            <button type="button" onclick="abrirSelectorCorreo('habeasdata@unbosque.edu.co', event)"
-              class="text-[#FD7519] font-medium hover:underline cursor-pointer focus:outline-none">
+            <button type="button" onclick="abrirSelectorCorreo('habeasdata@unbosque.edu.co', event)" class="text-[#FD7519] font-medium hover:underline cursor-pointer focus:outline-none">
               habeasdata@unbosque.edu.co
             </button>
           </p>
         </div>
       </div>
 
+      <!-- ACEPTAR TERMINOS Y CONDICIONES-->
       <div class="p-4 border-t border-gray-200 bg-gray-50 flex items-center justify-end gap-3">
-        <button type="button" id="btn-rechazar-tc"
-          class="px-5 py-2.5 bg-white border border-gray-300 text-gray-700 text-xs font-semibold rounded-xl hover:bg-gray-100 transition-colors shadow-xs cursor-pointer">
+        <button type="button" id="btn-rechazar-tc" class="px-5 py-2.5 bg-white border border-gray-300 text-gray-700 text-xs font-semibold rounded-xl hover:bg-gray-100 transition-colors shadow-xs cursor-pointer">
           Rechazar
         </button>
-        <button type="button" id="btn-aceptar-tc"
-          class="px-6 py-2.5 btn-green-inst text-xs font-semibold rounded-xl transition-colors shadow-sm cursor-pointer">
+        <button type="button" id="btn-aceptar-tc" class="px-6 py-2.5 btn-green-inst text-xs font-semibold rounded-xl transition-colors shadow-sm cursor-pointer">
           Aceptar Términos y Condiciones
         </button>
       </div>
@@ -458,7 +433,7 @@
     </div>
   </div>
 
-  <!-- MODAL / SELECTOR DE CORREO (GMAIL, OUTLOOK, PREDETERMINADO) -->
+  <!-- SELECTOR DE CORREO -->
   <div id="modal-selector-correo" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 hidden">
     <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl space-y-4 border border-gray-200">
       <div class="text-center space-y-1">
@@ -466,34 +441,29 @@
         <p id="txt-correo-destino" class="text-xs text-gray-500 font-mono"></p>
       </div>
       <div class="space-y-2 pt-2">
-        <a id="link-gmail" href="#" target="_blank"
-          class="w-full flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white py-2.5 px-4 rounded-xl text-xs font-semibold transition-colors shadow-xs">
+        <a id="link-gmail" href="#" target="_blank" class="w-full flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white py-2.5 px-4 rounded-xl text-xs font-semibold transition-colors shadow-xs">
           <i class="fa-brands fa-google"></i> Abrir con Gmail
         </a>
-        <a id="link-outlook" href="#" target="_blank"
-          class="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-4 rounded-xl text-xs font-semibold transition-colors shadow-xs">
+        <a id="link-outlook" href="#" target="_blank" class="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-4 rounded-xl text-xs font-semibold transition-colors shadow-xs">
           <i class="fa-brands fa-microsoft"></i> Abrir con Outlook.com
         </a>
-        <a id="link-default" href="#"
-          class="w-full flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 py-2.5 px-4 rounded-xl text-xs font-semibold transition-colors border border-gray-300">
+        <a id="link-default" href="#" class="w-full flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 py-2.5 px-4 rounded-xl text-xs font-semibold transition-colors border border-gray-300">
           <i class="fa-solid fa-envelope"></i> Aplicativo predeterminado
         </a>
       </div>
       <div class="pt-2 text-center">
-        <button type="button" onclick="cerrarSelectorCorreo()"
-          class="text-xs text-gray-500 hover:text-gray-700 font-medium cursor-pointer">
+        <button type="button" onclick="cerrarSelectorCorreo()" class="text-xs text-gray-500 hover:text-gray-700 font-medium cursor-pointer">
           Cancelar
         </button>
       </div>
     </div>
   </div>
 
-  <!-- VENTANA AUXILIAR (MODAL) PARA VISUALIZAR EL PDF EN LA MISMA PÁGINA -->
-  <div id="modal-visor-pdf"
-    class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
-    <div
-      class="bg-white rounded-2xl max-w-2xl w-full h-[80vh] flex flex-col shadow-2xl overflow-hidden border border-gray-200">
-      <!-- Encabezado de la ventana -->
+  <!-- VENTANA AUXILIAR PARA VISUALIZAR EL PDF -->
+  <div id="modal-visor-pdf" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
+    <div class="bg-white rounded-2xl max-w-2xl w-full h-[80vh] flex flex-col shadow-2xl overflow-hidden border border-gray-200">
+      
+      <!-- ENCABEZADO -->
       <div class="p-4 border-b border-gray-200 flex items-center justify-between bg-gray-50">
         <div class="flex items-center gap-2">
           <i class="fa-solid fa-file-pdf text-[#1EC038] text-base"></i>
@@ -505,12 +475,12 @@
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
-      <!-- Contenido del visor (iframe embebido) -->
+      
       <div class="flex-1 bg-gray-100 p-2">
         <iframe id="iframe-pdf" src="" class="w-full h-full rounded-xl border border-gray-300 bg-white"
           frameborder="0"></iframe>
       </div>
-      <!-- Pie de la ventana con botón fácil para cerrar -->
+      
       <div class="p-3 border-t border-gray-200 bg-gray-50 flex items-center justify-end">
         <button type="button" onclick="cerrarVisorPDF()"
           class="px-5 py-2 bg-white border border-gray-300 text-gray-700 text-xs font-semibold rounded-xl hover:bg-gray-100 transition-colors shadow-xs cursor-pointer">
@@ -521,9 +491,8 @@
   </div>
 
 
-  <!-- MODAL DE CONFIRMACIÓN PARA FINALIZAR EL REGISTRO -->
-  <div id="modal-confirmar-finalizar"
-    class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
+  <!-- CONFIRMACIÓN PARA FINALIZAR EL REGISTRO -->
+  <div id="modal-confirmar-finalizar" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
     <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl border border-gray-200 text-center space-y-4">
       <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto text-xl">
         <i class="fa-solid fa-circle-question"></i>
@@ -535,18 +504,27 @@
         </p>
       </div>
       <div class="flex items-center gap-3 pt-1">
-        <button type="button" id="btn-cancelar-finalizar"
-          class="flex-1 px-4 py-2.5 bg-white border border-gray-300 text-gray-700 text-xs font-semibold rounded-xl hover:bg-gray-100 transition-colors cursor-pointer">
+        <button type="button" id="btn-cancelar-finalizar" class="flex-1 px-4 py-2.5 bg-white border border-gray-300 text-gray-700 text-xs font-semibold rounded-xl hover:bg-gray-100 transition-colors cursor-pointer">
           Cancelar
         </button>
-        <button type="button" id="btn-confirmar-finalizar"
-          class="flex-1 px-4 py-2.5 btn-green-inst text-xs font-semibold rounded-xl transition-colors shadow-sm cursor-pointer">
+        <button type="button" id="btn-confirmar-finalizar" class="flex-1 px-4 py-2.5 btn-green-inst text-xs font-semibold rounded-xl transition-colors shadow-sm cursor-pointer">
           Sí, finalizar
         </button>
       </div>
     </div>
   </div>
 
+  <!-- PIE DE PÁGINA -->
+  <footer class="py-4 text-center text-[12px]" style="color: var(--color-hint);">
+    <p>©2027 Universidad El Bosque | Panel Administrativo de Gestión</p>
+    <P>Vigilada Mineducación. Personería Jurídica otorgada mediante resolución 11153 del 4 de agosto de 1978</P>
+  </footer>
+
+
+
+
+
+  <!-- JAVASCRIPT -->
   <script>
     function abrirSelectorCorreo(email, event) {
       event.preventDefault();
@@ -583,12 +561,12 @@
       'cli_regFiscal': { titulo: 'Soporte del registro fiscal / Documento extranjero', desc: 'Vigencia no mayor a 30 días en formato PDF.', obligatorio: true }
     };
 
-    // Backend de validación de documentos (ms-tercero). Ajusta si corres el backend en otro host/puerto.
-    const API_BASE_URL = 'http://localhost:8080';
+    // Backend de validación de documentos (ms-tercero), desplegado en Azure Container Apps.
+    const API_BASE_URL = 'https://ms-tercero-api.bluesea-2df0ebb2.belgiumcentral.azurecontainerapps.io';
 
     // Interruptor de demo: en true llama al backend real para validar cédula/RUT; en false no
     // hace ninguna llamada y aprueba todos los documentos por defecto (útil sin el backend arriba).
-    const CALL_BACKEND = false;
+    const CALL_BACKEND = true;
 
     // Documentos para los que ya existe un modelo real en Azure Document Intelligence.
     // El resto se sigue mostrando como "simulado" hasta que se entrenen sus modelos.
@@ -1065,11 +1043,132 @@
       $('seccion-documentos').classList.add('hidden');
       $('seccion-volver').classList.add('hidden');
       $('seccion-etapa4').classList.remove('hidden');
+
+      finalizarRegistroTercero();
     });
+
+    // Finaliza el registro: sube los documentos ya validados, guarda el registro completo y
+    // dispara el correo de confirmación (todo en un solo paso, en el backend). Se dispara una
+    // sola vez, al confirmar "Finalizar registro", y nunca bloquea la UI: si falla, solo queda
+    // en la consola.
+    // Quita tildes, pasa a minúsculas, descarta signos de puntuación y filtra palabras de
+    // relleno ("de", "la", "el"...) para que el título del documento quede como un slug limpio:
+    // "Formato único de creación de proveedores" -> "formato_unico_creacion_proveedores".
+    function sluggificarTitulo(texto) {
+      const PALABRAS_VACIAS = new Set(['de', 'del', 'la', 'las', 'el', 'los', 'y', 'en', 'para', 'con', 'por', 'un', 'una', 'al']);
+      return texto
+        .toLowerCase()
+        .normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .replace(/[^a-z0-9\s]/g, ' ')
+        .split(/\s+/)
+        .filter((palabra) => palabra && !PALABRAS_VACIAS.has(palabra))
+        .join('_');
+    }
+
+    function fechaDDMMYYYY(fecha) {
+      const dd = String(fecha.getDate()).padStart(2, '0');
+      const mm = String(fecha.getMonth() + 1).padStart(2, '0');
+      return `${dd}${mm}${fecha.getFullYear()}`;
+    }
+
+    // Nombre final, ej.: formato_unico_creacion_proveedores_1234567890_30102026.pdf
+    // Se usa la cédula (o el NIT si es persona jurídica) en vez del id del registro, porque ese
+    // id todavía no existe en este momento: lo genera el backend al guardar el registro completo.
+    function nombrarArchivoDocumento(docKey, archivo, numeroIdentificacion) {
+      const titulo = catalogoDocs[docKey]?.titulo || docKey;
+      const extension = (archivo.name.split('.').pop() || 'pdf').toLowerCase();
+      const identificacion = numeroIdentificacion || 'sin-identificacion';
+      return `${sluggificarTitulo(titulo)}_${identificacion}_${fechaDDMMYYYY(new Date())}.${extension}`;
+    }
+
+    function finalizarRegistroTercero() {
+      if (!CALL_BACKEND) return;
+
+      const calidadTexto = { '1': 'Cliente', '2': 'Proveedor' }[$('calidad')?.value] || '';
+      const nacionalidadTexto = { '1': 'Extranjero', '2': 'Nacional' }[$('nacionalidad')?.value] || '';
+      const tipoPersonaTexto = { '1': 'Natural', '2': 'Juridica' }[$('tipoPersona')?.value] || '';
+
+      const cedulaValor = $('cedula')?.value?.trim() || '';
+      const nitValor = $('nit')?.value?.trim() || '';
+      const numeroIdentificacion = (tipoPersonaTexto === 'Juridica' && nitValor) ? nitValor : cedulaValor;
+
+      const formData = new FormData();
+      formData.append('calidad', calidadTexto);
+      formData.append('nacionalidad', nacionalidadTexto);
+      formData.append('tipoPersona', tipoPersonaTexto);
+      formData.append('correo', $('correoInstitucional')?.value?.trim() || '');
+      formData.append('nombre', $('nombre')?.value?.trim() || '');
+      formData.append('cedula', cedulaValor);
+      formData.append('fechaExpedicionCedula', $('fechaExpedicionCedula')?.value || '');
+      formData.append('lugarNacimiento', $('lugarNacimiento')?.value?.trim() || '');
+      formData.append('paisNacimiento', $('paisNacimiento')?.value?.trim() || '');
+      formData.append('nit', nitValor);
+      formData.append('celular', $('celular')?.value?.trim() || '');
+      formData.append('direccion', $('direccion')?.value?.trim() || '');
+
+      // Cada documento sube bajo su propia clave interna (prov_cedula, cli_rut, etc.) — el
+      // backend no asume cuáles ni cuántos son, los toma todos. Se renombra el archivo a algo
+      // legible y ordenado antes de enviarlo (en vez del nombre que le puso el usuario).
+      documentosActuales.forEach((docKey) => {
+        const archivo = estadoDocumentos[docKey]?.file;
+        if (archivo) {
+          const nombreOrdenado = nombrarArchivoDocumento(docKey, archivo, numeroIdentificacion);
+          formData.append(docKey, archivo, nombreOrdenado);
+        }
+      });
+
+      fetch(`${API_BASE_URL}/v1/tercero-registrations`, {
+        method: 'POST',
+        body: formData
+      }).catch(error => console.error('No se pudo finalizar el registro:', error));
+    }
 
     $('btn-finalizar-reiniciar')?.addEventListener('click', () => {
       window.location.reload();
     });
+
+    // SUB-ÁREAS DE CADA AREA 
+        const subareasPorArea = {
+            facultad_derecho: [
+                "Coordinación académica de derecho",
+                "Coordinación administrativa",
+                "Secretaría de facultad"
+            ],
+            vicerrectoria: [
+                "Compras y contratación",
+                "Registro de terceros",
+                "Recursos físicos"
+            ],
+            financiera: [
+                "Tesorería",
+                "Presupuesto",
+                "Facturación"
+            ]
+        };
+
+        function actualizarSubareas() {
+            const selectArea = document.getElementById("areaSolicitante");
+            const selectSubArea = document.getElementById("subArea");
+            const areaSeleccionada = selectArea.value;
+
+            selectSubArea.innerHTML = '<option value="" disabled selected>Seleccione una sub-opción</option>';
+
+            if (areaSeleccionada && subareasPorArea[areaSeleccionada]) {
+                // HABILITAR SELECTOR DE SUB-ÁREAS
+                selectSubArea.disabled = false;
+                
+                subareasPorArea[areaSeleccionada].forEach(function(subarea) {
+                    const opcion = document.createElement("option");
+                    opcion.value = subarea;
+                    opcion.textContent = subarea;
+                    selectSubArea.appendChild(opcion);
+                });
+            } else {
+                selectSubArea.disabled = true;
+                selectSubArea.innerHTML = '<option value="" disabled selected>Primero seleccione un área</option>';
+            }
+        }
+
   </script>
 </body>
 
